@@ -1,0 +1,356 @@
+/*
+ * Copyright 2016 Red Hat, Inc. and/or its affiliates
+ * and other contributors as indicated by the @author tags.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import url('../../keycloak/lib/zocial/zocial.css');
+
+body {
+    background-color: #35AFCC;
+
+    height: 800px;
+    background-image: url('../img/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: #fff;
+    font-family: Calcutta, sans-serif;
+    font-size: 16px;
+    text-shadow: none;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.alert {
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+a {
+    background-color: transparent;
+    color: #FFFFFF;
+
+    font-weight: bold;
+    text-decoration: underline;
+
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.josa-login-container {
+    padding: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .josa-login-container {
+        padding: 10px 85px;
+    }
+}
+
+
+.josa-login-card {
+    position: relative;
+    top: 120px;
+    padding-bottom: 20px;
+}
+
+#kc-content {
+    width: 700px;
+}
+
+#kc-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#kc-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#kc-form-wrapper {
+    padding-right: 40px;
+}
+
+div#kc-social-providers {
+    border-left: 1px solid #FFFFFF;
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+
+#kc-form label {
+    display: block;
+    font-weight: normal;
+}
+
+#kc-form-buttons {
+    text-align: right;
+}
+
+#kc-info {
+    margin-top: 40px;
+}
+
+
+input[type=text], input[type=password] {
+    color: #3d3d3d;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border: 0px solid rgba(0,0,0,0.2);
+    box-shadow: none;
+    padding: 10px;
+    width: 300px;
+}
+
+input[type=text]:hover, input[type=password]:hover {
+    background-color: #F5F5F5;
+}
+
+input[type=submit] {
+    font-family: Calcutta, sans-serif;
+
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+
+    font-weight: bold;
+
+    padding: 10px;
+    margin-top: 10px;
+    width: 150px;
+}
+
+input[type=submit]:hover {
+    background: #FFFFFF;
+    color: #FFFFFF
+}
+
+button[type=submit] {
+    font-family: Calcutta, sans-serif;
+
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+
+    font-weight: bold;
+
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 150px;
+}
+
+button[type=submit]:hover {
+    background: #FFFFFF;
+    color: #FFFFFF
+}
+
+div#kc-form-options div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+div#kc-feedback {
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+div#kc-feedback-wrapper {
+    padding: 1em;
+}
+
+div.feedback-success {
+    background-color: rgba(155,155,255,0.1);
+}
+
+div.feedback-warning {
+    background-color: rgba(255,175,0,0.1);
+}
+
+div.feedback-error {
+    background-color: rgba(255,0,0,0.1);
+}
+
+div#kc-header {
+    background-image: url('../img/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 80px;
+}
+
+div#kc-header-wrapper {
+    display: none;
+}
+
+#kc-register-form {
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+#kc-update-profile-form {
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+div#social-login {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    float: right;
+    width: 150px;
+    padding: 20px 0 200px 40px;
+}
+
+div.social-login span {
+    display: none;
+}
+
+div#kc-social-providers ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 3px
+}
+
+div#kc-social-providers ul li {
+    margin-bottom: 20px;
+}
+
+div#kc-social-providers ul li span {
+    display: inline;
+    width: 100px;
+}
+
+.zocial.acrobat,
+.zocial.bitcoin,
+.zocial.cloudapp,
+.zocial.dropbox,
+.zocial.email,
+.zocial.eventful,
+.zocial.github,
+.zocial.gmail,
+.zocial.instapaper,
+.zocial.itunes,
+.zocial.ninetyninedesigns,
+.zocial.openid,
+.zocial.plancast,
+.zocial.pocket,
+.zocial.posterous,
+.zocial.reddit,
+.zocial.secondary,
+.zocial.stackoverflow,
+.zocial.viadeo,
+.zocial.weibo,
+.zocial.wikipedia,
+a.zocial {
+    font-family: Calcutta, sans-serif;
+
+    box-shadow: none;
+    text-shadow: none;
+
+    background: none;
+    background-color: #35AFCC;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+
+    font-weight: bold;
+
+    padding: 6px 12px;
+    margin-top: 26px;
+    margin-right: 10px;
+
+    border-radius: 0;
+}
+
+
+.zocial.acrobat:focus,
+.zocial.acrobat:hover,
+.zocial.bitcoin:focus,
+.zocial.bitcoin:hover,
+.zocial.dropbox:focus,
+.zocial.dropbox:hover,
+.zocial.email:focus,
+.zocial.email:hover,
+.zocial.eventful:focus,
+.zocial.eventful:hover,
+.zocial.github:focus,
+.zocial.github:hover,
+.zocial.gmail:focus,
+.zocial.gmail:hover,
+.zocial.instapaper:focus,
+.zocial.instapaper:hover,
+.zocial.itunes:focus,
+.zocial.itunes:hover,
+.zocial.ninetyninedesigns:focus,
+.zocial.ninetyninedesigns:hover,
+.zocial.openid:focus,
+.zocial.openid:hover,
+.zocial.plancast:focus,
+.zocial.plancast:hover,
+.zocial.pocket:focus,
+.zocial.pocket:hover,
+.zocial.posterous:focus,
+.zocial.posterous:hover,
+.zocial.reddit:focus,
+.zocial.reddit:hover,
+.zocial.secondary:focus,
+.zocial.secondary:hover,
+.zocial.stackoverflow:focus,
+.zocial.stackoverflow:hover,
+.zocial.twitter:focus,
+.zocial.viadeo:focus,
+.zocial.viadeo:hover,
+.zocial.weibo:focus,
+.zocial.weibo:hover,
+.zocial.wikipedia:focus,
+.zocial.wikipedia:hover,
+a.zocial:hover {
+    background: #FFFFFF;
+    color: #FFFFFF
+}
+
+.zocial.acrobat:active,
+.zocial.bitcoin:active,
+.zocial.dropbox:active,
+.zocial.email:active,
+.zocial.eventful:active,
+.zocial.github:active,
+.zocial.gmail:active,
+.zocial.instapaper:active,
+.zocial.itunes:active,
+.zocial.ninetyninedesigns:active,
+.zocial.openid:active,
+.zocial.plancast:active,
+.zocial.pocket:active,
+.zocial.posterous:active,
+.zocial.reddit:active,
+.zocial.secondary:active,
+.zocial.stackoverflow:active,
+.zocial.viadeo:active,
+.zocial.weibo:active,
+.zocial.wikipedia:active {
+    background: #FFFFFF;
+    color: #FFFFFF
+}
