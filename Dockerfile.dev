@@ -1,4 +1,4 @@
-FROM docker.io/jboss/keycloak:11.0.2
+FROM docker.io/jboss/keycloak:latest
 
 # Turn of caching in the configuration so we can modify the theme and refresh to see changes
 COPY ./resources/standalone.xml /opt/jboss/keycloak/standalone/configuration/standalone.xml
